@@ -2,7 +2,6 @@ import './assets/styles.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import { AuthWrapper } from './context/AuthContext.tsx';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeWrapper } from './components/theme/ThemeWrapper.tsx';
@@ -16,26 +15,24 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <AuthWrapper>
-          <ThemeWrapper>
-            <ModalProvider>
-              <Toaster
-                position="top-right"
-                toastOptions={{
-                  className: 'toast',
-                  success: {
-                    className: 'success-toast',
-                  },
-                  error: {
-                    className: 'error-toast',
-                  },
-                }}
-              />
-              <ModalManager />
-              <App />
-            </ModalProvider>
-          </ThemeWrapper>
-        </AuthWrapper>
+        <ThemeWrapper>
+          <ModalProvider>
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                className: 'toast',
+                success: {
+                  className: 'success-toast',
+                },
+                error: {
+                  className: 'error-toast',
+                },
+              }}
+            />
+            <ModalManager />
+            <App />
+          </ModalProvider>
+        </ThemeWrapper>
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>

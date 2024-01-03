@@ -1,13 +1,15 @@
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { Box, Paper, Typography } from '@mui/material';
 
 function HomePage(): JSX.Element {
   return (
-    <Card>
-      <CardHeader title="Home Page" />
-      <CardContent>
-        <div>HomePage</div>
-      </CardContent>
-    </Card>
+    <Paper sx={{ display: 'grid', placeItems: 'center', height: 'calc(100vh - 4rem)' }}>
+      <Box sx={{ textAlign: 'center' }}>
+        <Typography variant="caption">welcome to</Typography>
+        <Typography variant="h1" sx={{ fontSize: '3rem' }}>
+          Widget Board
+        </Typography>
+      </Box>
+    </Paper>
   );
 }
 
