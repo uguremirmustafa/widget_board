@@ -1,5 +1,8 @@
 import { PaletteMode, Shadows, createTheme } from '@mui/material';
-import '@fontsource/poppins';
+import '@fontsource/poppins/900.css';
+import '@fontsource/poppins/700.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/400.css';
 
 const dark = {
   bg0: '#282828',
@@ -119,7 +122,7 @@ export const getTheme = (mode: PaletteMode) => {
       },
       h1: {
         fontSize: '1.875rem',
-        fontWeight: 700,
+        fontWeight: 900,
       },
       h2: {
         fontSize: '1.75rem',
@@ -128,6 +131,9 @@ export const getTheme = (mode: PaletteMode) => {
       h5: {
         fontSize: '1.5rem',
         fontWeight: 700,
+      },
+      subtitle1: {
+        fontWeight: 500,
       },
       fontSize: 14,
     },
